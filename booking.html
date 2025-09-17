@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SANDERS</title>
+    <link rel="stylesheet" href="booking.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "KeTV0DwaD6443Opgm",
+      });
+   })();
+</script>
+</head>
+<body>
+   
+    <div class="container">
+        <h1>SANDERS</h1>
+        <div class="navbar">
+            <ul>
+                <li><a href="index (1).html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="desination .html">DESTINATION</a></li>
+                <li><a href="ITINERARY.html">ITINERARY</a></li>
+                <li><a href="accomodation.html">ACCOMMODATION</a></li>
+                <li><a href="contact .html">CONTACT</a></li>
+                <li><a class="reservation" href="booking.html">BOKING</a></li>
+            </ul>
+        </div>
+    </div>
+    <section class="header-section">
+        <h1> Sanders booking Section </h1>
+        
+    </section>
+
+    <div class="booking-container">
+        <div class="booking-content">
+            <!-- Time Open Section -->
+            <div class="time-open">
+                <h2>TIME OPEN</h2>
+                <p><span>Monday-Friday</span><br>7am - 11am (Breakfast)<br>11am - 10pm (Lunch/Dinner)</p>
+                <p><span>Saturday and Sunday</span><br>9am - 1am (Breakfast)<br>1am - 10pm (Lunch/Dinner)</p>
+                <p class="call-us">Call Us: (250) 370360</p>
+            </div>
+            <!-- Reservation Form Section -->
+            <div class="reservation-form">
+                <h2>RESERVATION ONLINE</h2>
+                <p>Select your destination and plan your itinerary. Let’s make your trip unforgettable!</p>
+                <form id="bookingForm">
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <input type="email" id="email" placeholder="Your Email" required>
+                    <input type="tel" id="phone" placeholder="Enter your phone number" required>
+                    <input type="date" id="date" required>
+                    <input type="time" id="time" required>
+                    <select id="destination" required>
+                        <option value="" disabled selected>Select a destination</option>
+                        <option value="Safari Tour">Safari Tour</option>
+                        <option value="Beach Paradise">Beach Paradise</option>
+                        <option value="Mountain Adventure">Mountain Adventure</option>
+                        <option value="City Exploration">City Exploration</option>
+                    </select>
+                    <select id="people" required>
+                        <option value="" disabled selected>How many people</option>
+                        <option value="1">1 Person</option>
+                        <option value="2">2 People</option>
+                        <option value="3">3 People</option>
+                        <option value="4">4 People</option>
+                        <option value="5+">5+ People</option>
+                    </select>
+                    <label for="itinerary">Itinerary</label>
+                    <textarea id="itinerary" placeholder="Describe any specific activities or itinerary" rows="3"></textarea>
+                    <button type="submit">SUBMIT</button>
+                </form>
+                <div id="confirmationMessage" class="confirmation-message"></div>
+            </div>
+        </div>
+    </div>
+
+ 
+    <div class="button-container">
+        <button class="floating-button" onclick="navigateHome()">🏠</button>
+    
+        <button class="floating-button" onclick="scrollUp()">☝️</button>
+        <button class="floating-button" onclick="scrollDown()">👇</button>
+        <button class="floating-button" onclick="goBack()">🔙</button>
+    </div>
+<script src="script.js"></script>
+
+<footer>
+    <div class="footer-container">
+      <!-- Section 1: About/Logo -->
+      <div class="footer-section">
+        <img src="logo.png" alt="Company Logo" class="footer-logo">
+        <p class="footer-description">
+          sanders safaris is toulism and travle agency 
+        </p>
+      </div>
+  
+      <!-- Section 2: Quick Links -->
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="/index (1).html">HOME</a></li>
+          <li><a href="/about.html">About Us</a></li>
+          <li><a href="/DESTINATION.html">Destination</a></li>
+          <li><a href="/ITINERARY.html">ITINERARY</a></li>
+          <li><a href="/contact.css">Contact Us</a></li>
+          <li><a href="/booking.html">BOOKING</a></li>
+        </ul>
+      </div>
+  
+      <!-- Section 3: Contact Information -->
+      <div class="footer-section">
+        <h4>Contact Us</h4>
+        <ul class="footer-contact">
+          <li><i class="fas fa-map-marker-alt"></i> Musanze, musanze City, Rwandwa</li>
+          <li><i class="fas fa-phone"></i> + (250) 780370360</li>
+          <li><i class="fas fa-envelope"></i> sanders.safaris@gmail.com</li>
+        </ul>
+      </div>
+  
+      <!-- Section 4: Social Media Links -->
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/share/1948Vx7e8G/" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Copyright Section -->
+    <div class="footer-bottom">
+      <p>&copy; 2024 sanders safaris. All Rights Reserved.</p>
+    </div>
+    <div class="whatsapp-icon" id="whatsapp-icon">
+      <a href="https://wa.link/ar6wj5" id="whatsapp-link">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+      </a>
+  </div>
+  </section>
+  </div>
+  </body>

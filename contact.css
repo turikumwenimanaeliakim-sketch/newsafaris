@@ -1,0 +1,208 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+  }
+  
+  body{
+    background: rgba(7, 6, 6, 0.7) url('') center center fixed;
+    background-size: cover;
+    background-blend-mode: darken;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #050505;
+  }
+  
+  
+  .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .container h1{
+    color: orangered;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  .navbar ul li{
+    display: inline-block;
+    padding: 18px;
+    text-transform: uppercase;
+  }
+  
+  .navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    padding: 4px;
+    transition: 3.5s;
+  }
+  
+  .navbar ul li a:hover{
+    box-shadow: 0 3px 50px orangered inset,0 3px 50px orangered inset,
+    0 3px 50px orangered inset,0 3px 50px orangered inset;
+  }
+  
+  .navbar .reservation{
+    padding: 8px;
+    background-color: orangered;
+}
+
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(image/elephent1\ \(1\).jpg);
+}
+
+.contact-form {
+    display: flex;
+    width: 80%;
+    max-width: 900px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.form-left {
+    flex: 1;
+    padding: 20px;
+    background-color: #e6f7f8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-left h2 {
+    margin-bottom: 15px;
+    color: #007a8c;
+}
+
+.form-left p {
+    margin-bottom: 20px;
+    color: #555;
+    font-size: 14px;
+}
+
+.form-left .info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.form-left .info div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-left .info div i {
+    color: #007a8c;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #007a8c;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    background-color: #005f6e;
+}
+
+.form-right {
+    flex: 1;
+    padding: 20px;
+    background-color: #d9f9fb;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-right h2 {
+    margin-bottom: 15px;
+    color: #007a8c;
+}
+
+.form-right input, .form-right textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #007a8c;
+    border-radius: 5px;
+    outline: none;
+    font-size: 14px;
+}
+
+.form-right textarea {
+    resize: none;
+    height: 100px;
+}
+
+.form-right button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007a8c;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-right button:hover {
+    background-color: #005f6e;
+}
+.button-container {
+    position: fixed;
+    bottom: 20px; /* Distance from the bottom */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    z-index: 1000;
+    display: flex;
+    gap: 10px; /* Space between buttons */
+  }
+  
+  .floating-button {
+    padding: 15px;
+    font-size: 24px; /* Size of the emoji */
+    background-color: black transparent;
+    color: white;
+    border: none;
+    border-radius: 50%; /* Circular button */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .floating-button:hover {
+    background-color: #7a594e;
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    box-shadow: 0 6px 12px orangered; /* Enhanced shadow on hover */
+  }
+  .header-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+    background-color: #ddd;
+  
+  }

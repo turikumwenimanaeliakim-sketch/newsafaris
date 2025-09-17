@@ -1,0 +1,379 @@
+/* General Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Video Background */
+#video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Overlay to darken the video */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+  z-index: 0;
+}
+
+/* Navigation Bar Container */
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  box-shadow: 0 3px 50px orangered inset,0 3px 50px orangered inset,
+  0 3px 50px orangered inset,0 3px 50px orangered inset;/* Customize hover color */
+}
+
+.navbar ul li a.reservation {
+  background-color: #ff6f61; /* Customize button color */
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar ul li a.reservation:hover {
+  background-color: #e65a50; /* Darker shade on hover */
+}
+
+/* Content Container */
+.content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  background-color: #ff6f61; /* Customize button color */
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #e65a50; /* Darker shade on hover */
+}
+
+/* About Section */
+.about-section {
+  position: relative;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  padding: 50px 20px;
+  margin-top: 100vh; /* Push below the video section */
+  color: white;
+  text-align: center;
+}
+
+.container-about {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Team Section */
+#about-us {
+  position: relative;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  padding: 50px 20px;
+  color: white;
+  text-align: center;
+}
+
+.team-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.team-member {
+  background: rgba(255, 255, 255, 0.1); /* Light background for team members */
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+}
+
+.team-member img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.team-member h3 {
+  margin: 10px 0;
+  font-size: 1.5rem;
+  color: #ff6f61; /* Team member name color */
+}
+
+.team-member p {
+  font-size: 1rem;
+  color: white;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .team-section {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.read-more {
+  text-decoration: none;
+padding: 0.5rem 1rem;
+background: gold;
+color: #333;
+border-radius: 5px;
+font-weight: bold;
+transition: background 0.3s ease;
+
+}
+
+.read-more:hover {
+text-decoration: underline;
+}
+.testimonial-section, .hotel-section {
+  margin: 20px auto;
+  max-width: 800px;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-container {
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.testimonial {
+  display: none;
+  padding: 20px;
+  background: #c25656;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease;
+}
+
+.testimonial.active {
+  display: block;
+}
+
+.dots-navigation {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot:hover {
+  background-color: #717171;
+}
+
+.dot.active {
+  background-color: #4CAF50;
+}
+.button-container {
+  position: fixed;
+  bottom: 20px; /* Distance from the bottom */
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
+  z-index: 1000;
+  display: flex;
+  gap: 10px; /* Space between buttons */
+}
+
+.floating-button {
+  padding: 15px;
+  font-size: 24px; /* Size of the emoji */
+  background-color: black transparent;
+  color: white;
+  border: none;
+  border-radius: 50%; /* Circular button */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.floating-button:hover {
+  background-color: #7a594e;
+  transform: scale(1.1); /* Slightly enlarge on hover */
+  box-shadow: 0 6px 12px orangered; /* Enhanced shadow on hover */
+}
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 0;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 0 20px;
+}
+
+.footer-logo {
+  width: 150px;
+  margin-bottom: 10px;
+}
+
+.footer-description {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-links, .footer-contact {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li, .footer-contact li {
+  margin-bottom: 10px;
+}
+
+.footer-links a, .footer-contact a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links a:hover, .footer-contact a:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #007bff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid #444;
+  font-size: 14px;
+}
+.whatsapp-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #25D366;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.whatsapp-icon:hover {
+  background-color: #128C7E;
+}
+
+.whatsapp-icon img {
+  width: 30px;
+  height: 30px;
+}
